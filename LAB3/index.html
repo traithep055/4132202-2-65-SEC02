@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <style>
+            .red {
+              color: red;  
+            }
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+    </head>
+    <body>
+        <div id="div1">Hello !</div>
+        <button id="btn1">Click Me...</button>
+        <hr>
+        <div>
+            <input type="text" class="in1">
+            <input type="text" class="in1">
+            <input type="text" class="in1">
+            <div>
+                <button id="btn2">SAVE</button>
+                <button id="btn3">COLOR</button>
+            </div>
+
+            <div id="div_form"></div>
+        </div>
+    </body>
+</html>
+<script>
+  var num = 10; //globla
+  let name = "Ping"; //scope 
+  const no = 10.45;
+  let arr = [10, 20, "Hi"];
+  const obj = {name: "Dum", age: 20};
+  const objmix = {
+    data:[
+        {name:"dang", gpa:3.45},
+        {name:"Dong", age: 18, gpa: 3.33}
+    ]
+ }; 
+  console.log(name);  
+  console.log(arr[1]);
+  console.log(objmix.data[1].name);
+  
+  document.getElementById("div1").innerHTML = name;
+
+  function add(a,b) {
+    return a + b;
+  }
+
+  console.log(add(3,5));
+
+  $(function () {
+    //alert("Hello jQuery!");
+    $("#div1").text(num);
+    $("#btn2").click(function () {
+        $(".in1").val("BRU");
+    });
+
+    $("#btn3").bind("click",()=>{
+        $(".in1:even").addClass("red"); //filter คือ even
+    });
+
+    $("#div_form").load("./pages/form.html");
+
+  }); //jQuery Handle
+
+</script>
