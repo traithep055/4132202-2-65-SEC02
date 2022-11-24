@@ -1,0 +1,9 @@
+version: '3'
+services:
+  php-apache:
+    container_name: php-apache
+    image: php:7.4-zts-alpine
+    volumes:
+      - ./php:/var/www/html/
+    ports:
+      - 8000:80
