@@ -1,5 +1,5 @@
 version: '3'
-service:
+services:
   ssh:
     container_name: ssh-sec2
     image: rastasheep/ubuntu-sshd
